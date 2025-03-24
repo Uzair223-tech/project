@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM MANIPULATION</title>
+</head>
+<body>
+    <script>
+    //CREATING ELEMENTS
+     let crF = document.createElement("div");
+     document.body.appendChild(crF);
+     let crS = document.createElement("div");
+     crF.append(crS);
+     let crT = document.createElement("div");
+     crF.append(crT);
+     let crFr = document.createElement("div");
+     crF.append(crFr);
+     let crFi = document.createElement("div");
+     crF.append(crFi);
+
+     //ADDING HTML TO THE ELEMENTS
+     crS.innerText="HOME";
+     crT.innerText="ORDERS";
+     crFr.innerText="SERVICES";
+     crFi.innerText="ABOUT";
+
+
+    //ADDING CLASS TO THE ELEMENTS
+    crF.classList.add("parent");
+    crS.classList.add("cls-1");
+    crT.classList.add("cls-1");
+    crFr.classList.add("cls-1");
+    crFi.classList.add("cls-1");
+     
+
+    //ADDING CSS TO THE ELEMENTS
+    let sty2 = document.querySelector(".parent");
+   
+    sty2.style.display="flex";
+    sty2.style.justifyContent="space-evenly";
+    sty2.style.alignitems="center";
+    let sty1 = document.querySelectorAll(".cls-1");
+    sty1.forEach((sty)=>{
+        sty.style.textAlign="center";
+        sty.style.border="2px solid red";
+        sty.style.height="30px";
+        sty.style.width="140px";
+        sty.style.padding="10px";
+        sty.style.margin="40px";
+        sty.style.backgroundColor="aqua";
+    })
+   
+    
+   
+    
+    
+  
+   
+
+    // for(let index=0 ; index<sty1.length ; index++){
+    //     let b = sty1[index];
+    //     console.log(b);
+        
+    // }
+
+     
+    </script>
+</body>
+</html>
